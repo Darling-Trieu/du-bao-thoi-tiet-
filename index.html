@@ -553,7 +553,7 @@ function startShow() {
   if (p && p.then) p.then(() => begin(true)).catch(() => { setMusicStat("trình duyệt chặn phát nhạc"); begin(false); });
   else begin(true);
 }
-const VOL_INTRO = 1, VOL_LOOP = .62; // opening at full volume, the repeating middle section (from TP.HCM on) quieter
+const VOL_INTRO = 1.2, VOL_LOOP = .60; // opening at full volume, the repeating middle section (from TP.HCM on) quieter
 function music() {
   if (!musicOn) return;
   if (audio.currentTime >= LOOP_B) audio.currentTime -= (LOOP_B - LOOP_A); // repeat the middle section
